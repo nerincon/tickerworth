@@ -1,0 +1,1 @@
+export const GET_KEY_RATIOS = 'GET_KEY_RATIOS'

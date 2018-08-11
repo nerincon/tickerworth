@@ -1,36 +1,33 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import axios from 'axios';
+import MainSearchPage from './MainSearchPage'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import CompanyPage from './CompanyPage'
+import { Provider } from 'react-redux'
+import store from './store.js'
 
 class App extends Component {
-
-
-  getApi = () => {
-    axios.get('http://localhost:5000/api', {
-    })
-      .then(({data}) => {
-        console.log('got here!')
-        console.log(data)
-      })
-      .catch(err => console.log(err));
-  };
-
-
   render () {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h1 className='App-title'>Welcome to React</h1>
-        </header>
-        <p className='App-intro'>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <button onClick={this.getApi}>Get API (Test)</button>
-      </div>
+      <Provider store={store}>
+        <Router>
+          <div>
+            <Route path='/' component={MainSearchPage} />
+            <Route path='/fin/:symbol' component={CompanyPage} />
+          </div>
+        </Router>
+      </Provider>
     )
   }
 }
 
 export default App
+
+// getApi = () => {
+//   axios.get('http://localhost:5000/api', {
+//   })
+//     .then(({data}) => {
+//       console.log('got here!')
+//       console.log(data)
+//     })
+//     .catch(err => console.log(err));
+// };

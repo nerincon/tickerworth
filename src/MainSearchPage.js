@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import Autocomplete from 'react-autocomplete'
 import { CategorizedRequest, setCompanies, getCompanies } from './utils'
+import { getFinancialRatios } from './actions/index'
 
 
 class MainSearchPage extends Component {
@@ -29,6 +32,18 @@ class MainSearchPage extends Component {
   }
 }
 
+// componentWillUpdate = ((nextProps, nextState) =>  {
+//   console.log('ComponentWillUpdate: listings: ', nextState.listings)
+//   // console.log(this.state)
+// })
+
+handleclick = (() => {
+  window.getFinancialRatios = this.props.getFinancialRatios
+  var symbol = this.state.listings[0].symbol
+  this.props.getFinancialRatios(symbol, this.props.history)
+})
+
+
   render () {
     var requestTimer = null
     return (
@@ -38,7 +53,7 @@ class MainSearchPage extends Component {
           inputProps={{ id: 'companies-autocomplete' }}
           items={this.state.listings}
           getItemValue={(item) => item.name}
-          onSelect={(value, state) => this.setState({ value, listings: [state] })}
+          // onSelect={(value, state) => this.setState({ value, listings: [state] })}
           onChange={(event, value) => {
             this.setState({ value, loading: true, listings: [] })
             clearTimeout(requestTimer)
@@ -63,10 +78,15 @@ class MainSearchPage extends Component {
               ) : items}
             </div>
           )}
+          onSelect={(value, item) => {
+            console.log(item.symbol)
+            this.setState({ value, listings: [item] })
+          }}
           isItemSelectable={(item) => !item.header}
         />
+          <button onClick={this.handleclick} >Search</button>
       </div>
     )
   }
 }
-export default MainSearchPage
+export default connect(({financials}) => financials, {getFinancialRatios})(withRouter(MainSearchPage))

@@ -22,6 +22,6 @@ export function CategorizedRequest (value, cb) {
 }
 
 export function setCompanies (companyListing) {
-  console.log('listing: ' + companyListing)
+  // console.log('listing: ' + companyListing)
   window.sessionStorage.setItem('companies', JSON.stringify(companyListing))
 }

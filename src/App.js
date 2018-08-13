@@ -11,8 +11,8 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            <Route path='/' component={MainSearchPage} />
-            <Route path='/fin/:symbol' component={CompanyPage} />
+            <Route exact path='/' component={MainSearchPage} />
+            <Route path='/comp/:symbol' component={CompanyPage} />
           </div>
         </Router>
       </Provider>

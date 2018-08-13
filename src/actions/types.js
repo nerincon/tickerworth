@@ -1,1 +1,3 @@
 export const GET_KEY_RATIOS = 'GET_KEY_RATIOS'
+export const GET_COMPANY_LOGO = 'GET_COMPANY_LOGO'
+export const GET_COMPANY_NAME = 'GET_COMPANY_NAME'

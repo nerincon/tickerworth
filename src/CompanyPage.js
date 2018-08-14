@@ -26,9 +26,9 @@ class CompanyPage extends Component {
       <div>
         <CompanyName />
         <CompanyLogo />
-        {this.props.financials && this.props.financials.map((fin) => {
+        {this.props.findata_db && this.props.findata_db.map((fin) => {
           return (
-            <h1 key={fin.grossProfit}>{fin.grossProfit}</h1>
+            <h1 key={fin['grossprofit']}>{fin['grossprofit']}</h1>
           )
         })}
       </div>

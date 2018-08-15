@@ -3,9 +3,8 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import CompanyLogo from './CompanyLogo'
 import CompanyName from './CompanyName'
-import { getFinancialRatios, getCompanyLogo, getCompanyName } from './actions/index'
-
-// https://storage.googleapis.com/iex/api/logos/AAP.png ---> company logo found here (AAP needs to be replaced with company symbol)
+import CompanyStats from './CompanyStats'
+import { getFinancialRatios, getCompanyLogo, getCompanyName, getCompanyStats } from './actions/index'
 
 class CompanyPage extends Component {
   componentDidMount () {
@@ -19,6 +18,7 @@ class CompanyPage extends Component {
     this.props.getFinancialRatios(symbol, this.props.history)
     this.props.getCompanyLogo(symbol)
     this.props.getCompanyName(symbol)
+    this.props.getCompanyStats(symbol)
   }
 
   render () {
@@ -26,6 +26,7 @@ class CompanyPage extends Component {
       <div>
         <CompanyName />
         <CompanyLogo />
+        <CompanyStats />
         {this.props.findata_db && this.props.findata_db.map((fin) => {
           return (
             <h1 key={fin['grossprofit']}>{fin['grossprofit']}</h1>
@@ -36,4 +37,4 @@ class CompanyPage extends Component {
   }
 }
 
-export default connect(({financials}) => financials, {getCompanyName, getCompanyLogo, getFinancialRatios})(withRouter(CompanyPage))
+export default connect(({financials}) => financials, {getCompanyName, getCompanyLogo, getCompanyStats, getFinancialRatios})(withRouter(CompanyPage))

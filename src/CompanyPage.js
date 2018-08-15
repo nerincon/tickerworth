@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import CompanyLogo from './CompanyLogo'
-import CompanyName from './CompanyName'
 import CompanyStats from './CompanyStats'
+import CompanyFinancials from './CompanyFinancials'
+import MyNav from './MyNav'
+import SidebarFoo from './SideBarFoo'
+import './CompanyPage.css'
 import { getFinancialRatios, getCompanyLogo, getCompanyName, getCompanyStats } from './actions/index'
 
 class CompanyPage extends Component {
@@ -23,15 +25,13 @@ class CompanyPage extends Component {
 
   render () {
     return (
-      <div>
-        <CompanyName />
-        <CompanyLogo />
-        <CompanyStats />
-        {this.props.findata_db && this.props.findata_db.map((fin) => {
-          return (
-            <h1 key={fin['grossprofit']}>{fin['grossprofit']}</h1>
-          )
-        })}
+      <div id='wrapper'>
+        <MyNav />
+        <SidebarFoo />
+        <div id='info'>
+          <CompanyStats />
+          <CompanyFinancials />
+        </div>
       </div>
     )
   }

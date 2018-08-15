@@ -8,7 +8,7 @@ class CompanyLogo extends Component {
   render () {
     return (
       <div>
-        <Image src={this.props.url} size='medium' circular />
+        <Image src={this.props.url} size='small' circular />
       </div>
     )
   }

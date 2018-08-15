@@ -1,0 +1,9 @@
+#wrapper {
+    overflow: hidden;
+}
+
+#info {
+    position: absolute;
+    margin-left: 25rem;
+    top: 10rem;
+}

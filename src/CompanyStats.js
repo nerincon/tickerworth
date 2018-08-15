@@ -9,7 +9,7 @@ class CompanyStats extends Component {
       <div>
         {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
           return (
-            <h1 key={stat['cash']}>{stat['cash']}</h1>
+            <p key={stat['cash']}>{stat['cash']}</p>
           )
         })}
       </div>

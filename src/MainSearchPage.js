@@ -4,7 +4,8 @@ import { withRouter } from 'react-router-dom'
 import Autocomplete from 'react-autocomplete'
 import { CategorizedRequest, setCompanies, getCompanies } from './utils'
 import { getFinancialRatios } from './actions/index'
-import { Button } from 'semantic-ui-react'
+import { Button, Image } from 'semantic-ui-react'
+import main from './main.jpg'
 import './MainSearchPage.css'
 import MyNav from './MyNav';
 
@@ -55,16 +56,15 @@ handleclick = ((e) => {
   render () {
     var requestTimer = null
     return (
-      <div>
+      <div id='wrapper'>
         <MyNav />
+        <Image id='oval' src={main} />
         <div id='mainsearch'>
-        <h1 id='header'>Company Search</h1>
           <Autocomplete
             value={this.state.value}
-            inputProps={{ id: 'companies-autocomplete' }}
+            inputProps={{ id: 'companies-autocomplete', placeholder: 'Company name here...' }}
             items={this.state.listings}
             getItemValue={(item) => item.name}
-            // onSelect={(value, state) => this.setState({ value, listings: [state] })}
             onChange={(event, value) => {
               this.setState({ value, loading: true, listings: [] })
               clearTimeout(requestTimer)

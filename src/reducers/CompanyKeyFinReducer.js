@@ -5,7 +5,7 @@ export default function financialRatios (state = {}, action) {
     case GET_KEY_FIN_RATIOS:
       return {
         ...state,
-        ...action.payload
+        financials: action.payload
       }
     default:
       return state

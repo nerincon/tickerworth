@@ -1,7 +1,7 @@
 #mainsidemenu {
     position: fixed;
     height: 100%;
-    width: 18rem;
+    width: 14rem;
     margin-right: 1.2rem;
     margin-top: 3.6rem;
     background: #222b3b linear-gradient(to bottom, #252d42, #1d1f26);
@@ -9,12 +9,12 @@
 
 #compname {
     padding-top: 2rem;
-    padding-left: 4rem;
-    padding-right: 3.5rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
     color: white;
 }
 
 #complogo {
     padding-top: 5rem;
-    padding-left: 3.5rem;
+    padding-left: 1.5rem;
 }

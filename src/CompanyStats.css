@@ -1,0 +1,23 @@
+body {
+    font-family: 'Montserrat';
+}
+
+.bubble {
+    display: inline-block;
+    margin-left: 4.5rem;
+    margin-right: 5rem;
+    margin-bottom: 6rem;
+    margin-top:7rem;
+    background-color: lightgreen;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding-top: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.bubble:hover {
+    background: #222b3b linear-gradient(to bottom, #252d42, #1d1f26);
+    color: white;
+}

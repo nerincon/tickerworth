@@ -7,10 +7,10 @@ import { getOIChartData } from './actions'
 class OperatingIncomeChart extends Component {
   render () {
     return (
-      <div style={{display: 'inline-block', paddingLeft: '1.8rem'}}>
+      <div style={{display: 'inline-block', paddingLeft: '2rem'}}>
         {this.props.oichart
           ? <div style={{display: 'inline-block', boxShadow: '2px 4px 3px rgba(0,0,0,0.3)', padding: '20px', marginBottom: '20px', backgroundColor: 'white', borderRadius: '10px'}}>
-            <h4 style={{color: 'green'}}>Operating Income</h4><BarChart
+            <h4 style={{color: 'green', fontFamily: 'Montserrat', textTransform: 'uppercase'}}>Operating Income</h4><BarChart
               axes
               grid
               colorBars
@@ -19,7 +19,7 @@ class OperatingIncomeChart extends Component {
               yDomainRange={[0, 100000000000]}
               margin={{top: 30, right: 0, bottom: 30, left: 100}}
               data={this.props.oichart}
-            /></div> : ''}
+            /><p style={{fontSize: '0.7rem', marginLeft: '21rem'}}>report date</p></div> : ''}
       </div>
     )
   }

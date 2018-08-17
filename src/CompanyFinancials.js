@@ -9,157 +9,157 @@ class CompanyFinancials extends Component {
     console.log(this.props.financials)
     return (
       <div>
-        <table style={{ width: '100%' }}>
+        <table id='tablet'>
           <tbody>
-            <tr>
-              <th>Report Date</th>
+            <tr className='cleanrow' id='dates'>
+              <th id='report'>Report Date</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.reportdate || 'N/A'}</td>
+                  <td key={idx}>{fin.reportdate || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Gross Profit</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.grossprofit || 'N/A'}</td>
+                  <td key={idx}>{fin.grossprofit || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Cost of Revenue</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.costofrevenue || 'N/A'}</td>
+                  <td key={idx}>{fin.costofrevenue || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Operating Revenue</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.operatingrevenue || 'N/A'}</td>
+                  <td key={idx}>{fin.operatingrevenue || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Total Revenue</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.totalrevenue || 'N/A'}</td>
+                  <td key={idx}>{fin.totalrevenue || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Operating Income</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.operatingincome || 'N/A'}</td>
+                  <td key={idx}>{fin.operatingincome || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Net Income</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.netincome || 'N/A'}</td>
+                  <td key={idx}>{fin.netincome || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Research and Development</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.researchanddevelopement || 'N/A'}</td>
+                  <td key={idx}>{fin.researchanddevelopement || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Operating Expense</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.operatingexpense || 'N/A'}</td>
+                  <td key={idx}>{fin.operatingexpense || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Total Assets</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.totalassets || 'N/A'}</td>
+                  <td key={idx}>{fin.totalassets || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Total Liabilities</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.totalliabilities || 'N/A'}</td>
+                  <td key={idx}>{fin.totalliabilities || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Current Cash</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.currentcash || 'N/A'}</td>
+                  <td key={idx}>{fin.currentcash || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Current Debt</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.currentdebt || 'N/A'}</td>
+                  <td key={idx}>{fin.currentdebt || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Total Cash</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.totalcash || 'N/A'}</td>
+                  <td key={idx}>{fin.totalcash || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Total Debt</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.totaldebt || 'N/A'}</td>
+                  <td key={idx}>{fin.totaldebt || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Shareholder Equity</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.shareholderequity || 'N/A'}</td>
+                  <td key={idx}>{fin.shareholderequity || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Cash Change</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.cashchange || 'N/A'}</td>
+                  <td key={idx}>{fin.cashchange || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>CashFlow</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.cashflow || 'N/A'}</td>
+                  <td key={idx}>{fin.cashflow || 'N/A'}</td>
                 )
               })}
             </tr>
-            <tr>
+            <tr className='cleanrow'>
               <th>Operating Gains and Loses</th>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td>{fin.operatinggainsandloses || 'N/A'}</td>
+                  <td key={idx}>{fin.operatinggainsandloses || 'N/A'}</td>
                 )
               })}
             </tr>

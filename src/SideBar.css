@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat';
+}
+
 #mainsidemenu {
     position: fixed;
     height: 100%;
@@ -11,10 +15,20 @@
     padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 3rem;
+    color: goldenrod;
+}
+
+#compname:hover {
     color: white;
 }
 
 #complogo {
     padding-top: 5rem;
     padding-left: 1.5rem;
+}
+
+#compimg:hover {
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 0.9s ease-in-out 0.1s;
 }

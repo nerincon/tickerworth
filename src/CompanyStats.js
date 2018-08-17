@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { getCompanyStats } from './actions'
+import './CompanyStats.css'
 
 class CompanyStats extends Component {
   render () {
@@ -9,9 +10,93 @@ class CompanyStats extends Component {
       <div>
         {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
           return (
-            <p key={stat['cash']}>{stat['cash']}</p>
+            <div className='bubble'>
+              <h4>Market Cap</h4>
+              <p key={stat['marketcap']}>{stat['marketcap']}</p>
+            </div>
           )
         })}
+        {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
+          return (
+            <div className='bubble'>
+              <h4>Revenue</h4>
+              <p key={stat['revenue']}>{stat['revenue']}</p>
+            </div>
+          )
+        })}
+        {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
+          return (
+            <div className='bubble'>
+              <h4>Revenue</h4>
+              <p key={stat['revenue']}>{stat['revenue']}</p>
+            </div>
+          )
+        })}
+        {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
+          return (
+            <div className='bubble'>
+              <h4>Revenue</h4>
+              <p key={stat['revenue']}>{stat['revenue']}</p>
+            </div>
+          )
+        })}
+        {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
+          return (
+            <div className='bubble'>
+              <h4>Revenue</h4>
+              <p key={stat['revenue']}>{stat['revenue']}</p>
+            </div>
+          )
+        })}
+        {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
+          return (
+            <div className='bubble'>
+              <h4>Revenue</h4>
+              <p key={stat['revenue']}>{stat['revenue']}</p>
+            </div>
+          )
+        })}
+        {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
+          return (
+            <div className='bubble'>
+              <h4>Revenue</h4>
+              <p key={stat['revenue']}>{stat['revenue']}</p>
+            </div>
+          )
+        })}
+        {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
+          return (
+            <div className='bubble'>
+              <h4>Revenue</h4>
+              <p key={stat['revenue']}>{stat['revenue']}</p>
+            </div>
+          )
+        })}
+        {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
+          return (
+            <div className='bubble'>
+              <h4>Revenue</h4>
+              <p key={stat['revenue']}>{stat['revenue']}</p>
+            </div>
+          )
+        })}
+        {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
+          return (
+            <div className='bubble'>
+              <h4>Revenue</h4>
+              <p key={stat['revenue']}>{stat['revenue']}</p>
+            </div>
+          )
+        })}
+        {this.props.statsdata_db && this.props.statsdata_db.map((stat) => {
+          return (
+            <div className='bubble'>
+              <h4>Revenue</h4>
+              <p key={stat['revenue']}>{stat['revenue']}</p>
+            </div>
+          )
+        })}
+
       </div>
     )
   }

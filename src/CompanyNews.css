@@ -1,0 +1,15 @@
+.row {
+    display: flex;
+  }
+  
+.col {
+    flex: 0.84;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: lightgreen;
+}
+
+.col:hover {
+    background: #222b3b linear-gradient(to bottom, #252d42, #1d1f26);
+    color: white;
+}

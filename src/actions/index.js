@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { GET_KEY_FIN_RATIOS, GET_COMPANY_LOGO, GET_COMPANY_NAME, GET_COMPANY_STATS, GET_CHART_TR, GET_CHART_CR, GET_CHART_GP, GET_CHART_OE, GET_CHART_OI, GET_CHART_NI } from './types'
+import { GET_KEY_FIN_RATIOS, GET_COMPANY_LOGO, GET_COMPANY_NAME, GET_COMPANY_STATS, GET_CHART_TR, GET_CHART_CR, GET_CHART_GP, GET_CHART_OE, GET_CHART_OI, GET_CHART_NI, GET_COMPANY_NEWS } from './types'
 
 export const getFinancialRatios = (symbol, history) => dispatch => {
   axios.get('http://localhost:5000/fin/' + symbol).then(res => {
@@ -64,5 +64,11 @@ export const getOIChartData = (symbol) => dispatch => {
 export const getNIChartData = (symbol) => dispatch => {
   axios.get('http://localhost:5000/nichart/' + symbol).then(res => {
     dispatch({type: GET_CHART_NI, payload: res.data})
+  })
+}
+
+export const getCompanyNews = (symbol) => dispatch => {
+  axios.get('http://localhost:5000/news/' + symbol).then(res => {
+    dispatch({type: GET_COMPANY_NEWS, payload: res.data})
   })
 }

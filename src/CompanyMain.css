@@ -1,0 +1,91 @@
+body {
+    font-family: 'Montserrat';
+}
+
+#industry {
+    position: absolute;
+    margin-left: 22.5rem;
+    top: 2rem;
+    padding: 2.5rem;
+    text-transform: uppercase;
+    background: #222b3b linear-gradient(to bottom, #252d42, #1d1f26);
+    color: white;
+}
+
+#industry:hover {
+    background: lightgreen;
+    color: black;
+}
+
+#sector {
+    position: absolute;
+    margin-left: 44rem;
+    top: 2rem;
+    padding-top: 2.4rem;
+    padding-bottom: 2.6rem;
+    padding-left: 2.5rem;
+    padding-right: 7rem;
+    text-transform: uppercase;
+    background: #222b3b linear-gradient(to bottom, #252d42, #1d1f26);
+    color: white;
+}
+
+#sector:hover {
+    background: lightgreen;
+    color: black;
+}
+
+#exchange {
+    position: absolute;
+    margin-top: 7rem;
+    margin-left: 6rem;
+    padding-top: 2.4rem;
+    padding-bottom: 2.6rem;
+    padding-left: 2.5rem;
+    padding-right: 5rem;
+    text-transform: uppercase;
+    background: #222b3b linear-gradient(to bottom, #252d42, #1d1f26);
+    color: white;
+}
+
+#exchange:hover {
+    background: lightgreen;
+    color: black;
+}
+
+#ceo {
+    position: absolute;
+    margin-top: 7rem;
+    margin-left: 35rem;
+    padding-top: 2.4rem;
+    padding-bottom: 2.6rem;
+    padding-left: 2.5rem;
+    padding-right: 8rem;
+    text-transform: uppercase;
+    background: #222b3b linear-gradient(to bottom, #252d42, #1d1f26);
+    color: white;
+}
+
+#ceo:hover {
+    background: lightgreen;
+    color: black;
+}
+
+#description {
+    position: absolute;
+    margin-bottom: 4rem;
+    margin-top: 22rem;
+    margin-right: 15rem;
+    padding-top: 2.4rem;
+    padding-bottom: 2.6rem;
+    padding-left: 2.5rem;
+    padding-right: 5rem;
+    text-transform: uppercase;
+    background: #222b3b linear-gradient(to bottom, #252d42, #1d1f26);
+    color: white;
+}
+
+#description:hover {
+    background: lightgreen;
+    color: black;
+}

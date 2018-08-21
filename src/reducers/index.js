@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import maininfo from './CompanyMainInfoReducer'
 import financials from './CompanyKeyFinReducer'
 import compnews from './CompanyNewsReducer'
 import img from './companyLogoReducer'
@@ -10,7 +11,18 @@ import gpchart from './ChartGPReducer'
 import oechart from './ChartOEReducer'
 import oichart from './ChartOIReducer'
 import nichart from './ChartNIReducer'
+import cachart from './ChartCAReducer'
+import tachart from './ChartTAReducer'
+import tlchart from './ChartTLReducer'
+import ccchart from './ChartCCReducer'
+import cdchart from './ChartCDReducer'
+import tcchart from './ChartTCReducer'
+import tdchart from './ChartTDReducer'
+import sechart from './ChartSEReducer'
+import cfchart from './ChartCFReducer'
+import oglchart from './ChartOGLReducer'
+import mcchart from './MonteCarloReducer'
 
 export default combineReducers({
-  financials, compnews, img, compname, compstats, trchart, crchart, gpchart, oechart, oichart, nichart
+  maininfo, financials, compnews, img, compname, compstats, trchart, crchart, gpchart, oechart, oichart, nichart, mcchart, cachart, tachart, tlchart, ccchart, cdchart, tcchart, tdchart, sechart, cfchart, oglchart
 })

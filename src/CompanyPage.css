@@ -18,10 +18,13 @@ body {
 #transition1 {
     opacity: 0.7;
     margin-top: 5rem;
-    margin-left: 16rem;
+    margin-left: 14.5rem;
     border: none;
     height: 6rem;
     border-radius: 50%;
+    width: 11rem;
+    height: 6rem;
+    padding-left: 4.2rem;
 }
 
 #transition1:hover { 
@@ -31,9 +34,9 @@ body {
 #transition2 {
     opacity: 0.7;
     margin-top: 5rem;
-    margin-left: 2.5rem;
+    margin-left: 10px;
     border: none;
-    padding-left: 2.1rem;
+    padding-left: 3rem;
     width: 11rem;
     height: 6rem;
     border-radius: 50%;
@@ -46,9 +49,9 @@ body {
 #transition3 {
     opacity: 0.7;
     margin-top: 5rem;
-    margin-left: 2.5rem;
+    margin-left: 10px;
     border: none;
-    padding-left: 2.8rem;
+    padding-left: 2.4rem;
     width: 11rem;
     height: 6rem;
     border-radius: 50%;
@@ -61,7 +64,22 @@ body {
 #transition4 {
     opacity: 0.7;
     margin-top: 5rem;
-    margin-left: 2.5rem;
+    margin-left: 10px;
+    border: none;
+    padding-left: 3rem;
+    width: 11rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+#transition4:hover {
+    opacity: 1;
+}
+
+#transition5 {
+    opacity: 0.7;
+    margin-top: 5rem;
+    margin-left: 10px;
     border: none;
     padding-left: 4rem;
     width: 11rem;
@@ -69,7 +87,37 @@ body {
     border-radius: 50%;
 }
 
-#transition4:hover {
+#transition5:hover {
+    opacity: 1;
+}
+
+#transition6 {
+    opacity: 0.7;
+    margin-top: 5rem;
+    margin-left: 10px;
+    border: none;
+    padding-left: 3rem;
+    width: 11rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+#transition6:hover {
+    opacity: 1;
+}
+
+#transition7 {
+    opacity: 0.7;
+    margin-top: 5rem;
+    margin-left: 10px;
+    border: none;
+    padding-left: 3.1rem;
+    width: 11rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+#transition7:hover {
     opacity: 1;
 }
 

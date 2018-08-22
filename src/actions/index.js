@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { GET_KEY_FIN_RATIOS, GET_COMPANY_LOGO, GET_COMPANY_NAME, GET_COMPANY_STATS, GET_CHART_TR, GET_CHART_CR, GET_CHART_GP, GET_CHART_OE, GET_CHART_OI, GET_CHART_NI, GET_COMPANY_NEWS, GET_COMPANY_MAIN, GET_COMPANY_MC, GET_CHART_CA, GET_CHART_TA, GET_CHART_TL, GET_CHART_CC, GET_CHART_CD, GET_CHART_TC, GET_CHART_TD, GET_CHART_SE, GET_CHART_CCHANGE, GET_CHART_CF, GET_CHART_OGL } from './types'
+import { GET_KEY_FIN_RATIOS, GET_COMPANY_LOGO, GET_COMPANY_NAME, GET_COMPANY_STATS, GET_CHART_TR, GET_CHART_CR, GET_CHART_GP, GET_CHART_OE, GET_CHART_OI, GET_CHART_NI, GET_COMPANY_NEWS, GET_COMPANY_MAIN, GET_COMPANY_MC, GET_CHART_CA, GET_CHART_TA, GET_CHART_TL, GET_CHART_CC, GET_CHART_CD, GET_CHART_TC, GET_CHART_TD, GET_CHART_SE, GET_CHART_CF, GET_CHART_OGL, GET_COMPANY_DDM } from './types'
 
 export const getFinancialRatios = (symbol, history) => dispatch => {
   axios.get('http://localhost:5000/fin/' + symbol).then(res => {
@@ -142,5 +142,11 @@ export const getCompanyMainInfo = (symbol) => dispatch => {
 export const getCompanyMC = (symbol) => dispatch => {
   axios.get('http://localhost:5000/mcarlo/' + symbol).then(res => {
     dispatch({type: GET_COMPANY_MC, payload: res.data})
+  })
+}
+
+export const getCompanyDDM = (symbol) => dispatch => {
+  axios.get('http://localhost:5000/ddm/' + symbol).then(res => {
+    dispatch({type: GET_COMPANY_DDM, payload: res.data})
   })
 }

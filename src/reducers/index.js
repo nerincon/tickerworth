@@ -22,7 +22,8 @@ import sechart from './ChartSEReducer'
 import cfchart from './ChartCFReducer'
 import oglchart from './ChartOGLReducer'
 import mcchart from './MonteCarloReducer'
+import ddm from './DDMReducer'
 
 export default combineReducers({
-  maininfo, financials, compnews, img, compname, compstats, trchart, crchart, gpchart, oechart, oichart, nichart, mcchart, cachart, tachart, tlchart, ccchart, cdchart, tcchart, tdchart, sechart, cfchart, oglchart
+  maininfo, financials, compnews, img, compname, compstats, trchart, crchart, gpchart, oechart, oichart, nichart, mcchart, cachart, tachart, tlchart, ccchart, cdchart, tcchart, tdchart, sechart, cfchart, ddm, oglchart
 })

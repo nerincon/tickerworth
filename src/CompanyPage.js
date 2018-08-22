@@ -22,11 +22,12 @@ import CompanyFinancials from './CompanyFinancials'
 import CompanyNews from './CompanyNews'
 import CompanyMain from './CompanyMainInfo'
 import MonteCarloChart from './MonteCarlo'
+import CompanyDDM from './CompanyDDM'
 import MyNav from './MyNav'
 import SidebarFoo from './SideBarFoo'
 import './CompanyPage.css'
 import { Menu } from 'semantic-ui-react'
-import { getCompanyMainInfo, getFinancialRatios, getCompanyNews, getCompanyLogo, getCompanyName, getCompanyStats, getTRChartData, getCRChartData, getGPChartData, getOEChartData, getOIChartData, getNIChartData, getCompanyMC, getCAChartData, getTAChartData, getTLChartData, getCCChartData, getCDChartData, getTCChartData, getTDChartData, getSEChartData, getCFChartData, getOGLChartData } from './actions/index'
+import { getCompanyMainInfo, getFinancialRatios, getCompanyNews, getCompanyLogo, getCompanyName, getCompanyStats, getTRChartData, getCRChartData, getGPChartData, getOEChartData, getOIChartData, getNIChartData, getCompanyMC, getCAChartData, getTAChartData, getTLChartData, getCCChartData, getCDChartData, getTCChartData, getTDChartData, getSEChartData, getCFChartData, getOGLChartData, getCompanyDDM } from './actions/index'
 
 class CompanyPage extends Component {
   state = { activeItem: 'Main', backgroundColor: 'green', }
@@ -42,6 +43,7 @@ class CompanyPage extends Component {
 
   goToCompanyPage (symbol) {
     this.props.getCompanyMC(symbol)
+    this.props.getCompanyDDM(symbol)
     this.props.getCompanyMainInfo(symbol)
     this.props.getFinancialRatios(symbol, this.props.history)
     this.props.getCompanyLogo(symbol)
@@ -101,11 +103,11 @@ class CompanyPage extends Component {
             <ShareholderEquityChart />
             <CashFlowChart />
             <OperatingGainsandLosesChart /></div>) : this.state.activeItem === 'Chart Details' ? 
-            <CompanyFinancials /> : this.state.activeItem === 'Key Ratios' ? <CompanyStats /> : this.state.activeItem === 'Valuation' ? <MonteCarloChart />: <CompanyNews />}
+            <CompanyFinancials /> : this.state.activeItem === 'Key Ratios' ? <CompanyStats /> : this.state.activeItem === 'Valuation' ? <div><MonteCarloChart /><CompanyDDM /></div> : <CompanyNews />}
         </div>
       </div>
     )
   }
 }
 
-export default connect(({financials}) => financials, {getCompanyMainInfo, getCompanyName, getCompanyNews, getCompanyLogo, getCompanyStats, getFinancialRatios, getTRChartData, getCRChartData, getGPChartData, getOEChartData, getOIChartData, getNIChartData, getCompanyMC, getCAChartData, getTAChartData, getTLChartData, getCCChartData, getCDChartData, getTCChartData, getTDChartData, getSEChartData, getCFChartData, getOGLChartData })(withRouter(CompanyPage))
+export default connect(({financials}) => financials, {getCompanyMainInfo, getCompanyName, getCompanyNews, getCompanyLogo, getCompanyStats, getFinancialRatios, getTRChartData, getCRChartData, getGPChartData, getOEChartData, getOIChartData, getNIChartData, getCompanyMC, getCAChartData, getTAChartData, getTLChartData, getCCChartData, getCDChartData, getTCChartData, getTDChartData, getSEChartData, getCFChartData, getOGLChartData, getCompanyDDM })(withRouter(CompanyPage))

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './SideBar.css'
 import CompanyName from './CompanyName'
 import CompanyLogo from './CompanyLogo'
+import CompanyPrice from './CompanyPrice'
 
 class SidebarFoo extends Component {
   render () {
@@ -12,6 +13,9 @@ class SidebarFoo extends Component {
         </div>
         <div id='complogo'>
           <CompanyLogo />
+        </div>
+        <div id='price'>
+          <CompanyPrice />
         </div>
       </div>
     )

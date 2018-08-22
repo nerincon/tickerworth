@@ -6,7 +6,8 @@
     flex: 0.84;
     padding: 1rem;
     margin-bottom: 2rem;
-    background-color: lightgreen;
+    font-size: 0.8rem;
+    background-color: lightgray;
 }
 
 .col:hover {

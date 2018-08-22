@@ -9,7 +9,7 @@ class MonteCarloChart extends Component {
   render () {
     // const groupArr = _.valuesIn(...this.props.mcchart[0])
     // console.log(groupArr)
-    window.DATA = this.props.mcchart
+    // window.DATA = this.props.mcchart
     const test = this.props.mcchart[0][0]
     console.log(test)
     var mylist = []
@@ -42,17 +42,10 @@ class MonteCarloChart extends Component {
  */
 
     return (
-      // <div style={{display: 'inline-block', paddingLeft: '2rem'}}>
-      //   <h1>test</h1>
-      //   { this.props.mcchart && this.props.mcchart.map((item, idx) => {
-      //     return (
-      //       <p>{item['0']}</p>
-      //     )
-      //   })}
-      // </div>
       <Plot
+        style={{marginLeft: '4rem'}}
         data={mydata}
-        layout={{width: 600, height: 400, title: 'MonteCarlo Simulation'}}
+        layout={{width: 800, height: 500, title: 'MonteCarlo Simulation'}}
       />
     )
   }

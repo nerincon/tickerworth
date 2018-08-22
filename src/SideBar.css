@@ -7,15 +7,14 @@ body {
     height: 100%;
     width: 14rem;
     margin-right: 1.2rem;
-    margin-top: 3.6rem;
-    background: #222b3b linear-gradient(to bottom, #252d42, #1d1f26);
+    background: lightgray;
 }
 
 #compname {
     padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 3rem;
-    color: goldenrod;
+    color: green;
 }
 
 #compname:hover {
@@ -27,8 +26,9 @@ body {
     padding-left: 1.5rem;
 }
 
-#compimg:hover {
-    cursor: default;
-    transform: rotate(360deg);
-    transition: all 0.9s ease-in-out 0.1s;
+#price {
+    background-color: white;
+    margin-top: 4rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem
 }

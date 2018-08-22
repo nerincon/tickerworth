@@ -2,169 +2,170 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { getFinancialRatios } from './actions'
+import { Table } from 'semantic-ui-react'
 import './CompanyFinancials.css'
 
 class CompanyFinancials extends Component {
   render () {
     console.log(this.props.financials)
     return (
-      <div>
-        <table id='tablet'>
-          <tbody>
-            <tr className='cleanrow' id='dates'>
-              <th id='report'>Report Date</th>
+      <div id='wrapper'>
+        <Table basic='very'>
+          <Table.Body>
+            <Table.Row>
+              <Table.Cell className='descheader'>Report Date</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.reportdate || 'N/A'}</td>
+                  <Table.Cell id='dates' key={fin.reportdate}>{fin.reportdate || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Gross Profit</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Gross Profit</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.grossprofit || 'N/A'}</td>
+                  <Table.Cell key={fin.grossprofit}>{fin.grossprofit || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Cost of Revenue</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Cost of Revenue</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.costofrevenue || 'N/A'}</td>
+                  <Table.Cell key={fin.costofrevenue}>{fin.costofrevenue || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Operating Revenue</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Operating Revenue</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.operatingrevenue || 'N/A'}</td>
+                  <Table.Cell key={fin.operatingrevenue}>{fin.operatingrevenue || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Total Revenue</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Total Revenue</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.totalrevenue || 'N/A'}</td>
+                  <Table.Cell key={fin.totalrevenue}>{fin.totalrevenue || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Operating Income</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Operating Income</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.operatingincome || 'N/A'}</td>
+                  <Table.Cell key={fin.operatingincome}>{fin.operatingincome || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Net Income</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Net Income</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.netincome || 'N/A'}</td>
+                  <Table.Cell key={fin.netincome}>{fin.netincome || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Research and Development</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Research and Development</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.researchanddevelopement || 'N/A'}</td>
+                  <Table.Cell key={fin.researchanddevelopement}>{fin.researchanddevelopement || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Operating Expense</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Operating Expense</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.operatingexpense || 'N/A'}</td>
+                  <Table.Cell key={fin.operatingexpense}>{fin.operatingexpense || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Total Assets</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Total Assets</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.totalassets || 'N/A'}</td>
+                  <Table.Cell key={fin.totalassets}>{fin.totalassets || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Total Liabilities</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Total Liabilities</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.totalliabilities || 'N/A'}</td>
+                  <Table.Cell key={fin.totalliabilities}>{fin.totalliabilities || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Current Cash</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Current Cash</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.currentcash || 'N/A'}</td>
+                  <Table.Cell key={fin.currentcash}>{fin.currentcash || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Current Debt</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Current Debt</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.currentdebt || 'N/A'}</td>
+                  <Table.Cell key={fin.currentdebt}>{fin.currentdebt || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Total Cash</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Total Cash</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.totalcash || 'N/A'}</td>
+                  <Table.Cell key={fin.totalcash}>{fin.totalcash || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Total Debt</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Total Debt</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.totaldebt || 'N/A'}</td>
+                  <Table.Cell key={fin.totaldebt}>{fin.totaldebt || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Shareholder Equity</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Shareholder Equity</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.shareholderequity || 'N/A'}</td>
+                  <Table.Cell key={fin.shareholderequity}>{fin.shareholderequity || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Cash Change</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Cash Change</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.cashchange || 'N/A'}</td>
+                  <Table.Cell key={fin.cashchange}>{fin.cashchange || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>CashFlow</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>CashFlow</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.cashflow || 'N/A'}</td>
+                  <Table.Cell key={fin.cashflow}>{fin.cashflow || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-            <tr className='cleanrow'>
-              <th>Operating Gains and Loses</th>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell className='descheader'>Operating Gains and Loses</Table.Cell>
               {this.props.financials && this.props.financials.map((fin, idx) => {
                 return (
-                  <td key={idx}>{fin.operatinggainsandloses || 'N/A'}</td>
+                  <Table.Cell key={fin.operatinggainsandloses}>{fin.operatinggainsandloses || 'N/A'}</Table.Cell>
                 )
               })}
-            </tr>
-          </tbody>
-        </table>
+            </Table.Row>
+          </Table.Body>
+        </Table>
       </div>
     )
   }

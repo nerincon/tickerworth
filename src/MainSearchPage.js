@@ -7,6 +7,9 @@ import { getFinancialRatios } from './actions/index'
 import { Button } from 'semantic-ui-react'
 import './MainSearchPage.css'
 import MyNav from './MyNav';
+import axios from 'axios';
+
+const url = process.env.NODE_ENV === 'development' ? 'http://localhost:5000/listings' : 'https://backendapiwav3space.herokuapp.com/listings'
 
 
 class MainSearchPage extends Component {
@@ -18,27 +21,18 @@ class MainSearchPage extends Component {
 
   async componentDidMount () {
     if (!getCompanies() || !getCompanies().length) {
-      await window.fetch('data/companies_dev.json')
-      .then(function (response) {
-        console.log(response)
-        return response.json()
-    })
-    .then(companyListing => {
-      this.setState({companyListing}, () => {
-          setCompanies(this.state.companyListing)
+      axios.get(url)
+      .then(companyListing => {
+        this.setState({companyListing}, () => {
+          setCompanies(this.state.companyListing['data'])
       })
     })
     .catch(() => console.error('Uh-oh - fetching initial inventory.json failed!'))
-  }
+    }
     else {
       console.log('Company listings set!')
   }
 }
-
-// componentWillUpdate = ((nextProps, nextState) =>  {
-//   console.log('ComponentWillUpdate: listings: ', nextState.listings)
-//   // console.log(this.state)
-// })
 
 handleclick = ((e) => {
   // window.getFinancialRatios = this.props.getFinancialRatios

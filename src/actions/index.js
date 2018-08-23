@@ -2,6 +2,7 @@ import axios from 'axios'
 
 import { GET_KEY_FIN_RATIOS, GET_COMPANY_LOGO, GET_COMPANY_NAME, GET_COMPANY_STATS, GET_CHART_TR, GET_CHART_CR, GET_CHART_GP, GET_CHART_OE, GET_CHART_OI, GET_CHART_NI, GET_COMPANY_NEWS, GET_COMPANY_MAIN, GET_COMPANY_MC, GET_CHART_CA, GET_CHART_TA, GET_CHART_TL, GET_CHART_CC, GET_CHART_CD, GET_CHART_TC, GET_CHART_TD, GET_CHART_SE, GET_CHART_CF, GET_CHART_OGL, GET_COMPANY_DDM, GET_COMPANY_PRICE } from './types'
 
+console.log(process.env.NODE_ENV)
 const url = process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'https://backendapitickerworth.herokuapp.com'
 
 const axiosInstance = axios.create({

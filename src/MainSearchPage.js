@@ -9,7 +9,7 @@ import './MainSearchPage.css'
 import MyNav from './MyNav';
 import axios from 'axios';
 
-const url = process.env.NODE_ENV === 'development' ? 'http://localhost:5000/listings' : 'https://backendapiwav3space.herokuapp.com/listings'
+const url = process.env.NODE_ENV === 'development' ? 'http://localhost:5000/listings' : 'https://backendapitickerworth.herokuapp.com/listings'
 
 
 class MainSearchPage extends Component {

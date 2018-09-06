@@ -16,7 +16,7 @@ class CompanyMain extends Component {
                 <Table.Body>
                   <Table.Row>
                     <Table.Cell className='descheader'>Website :</Table.Cell>
-                    <Table.Cell key={item.industry}><a href={item.website} target='_blank'>{item.website}</a></Table.Cell>
+                    <Table.Cell key={item.website}><a href={item.website} target='_blank'>{item.website}</a></Table.Cell>
                   </Table.Row>
                   <Table.Row>
                     <Table.Cell className='descheader'>Industry :</Table.Cell>

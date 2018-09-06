@@ -7,7 +7,7 @@ class CompanyName extends Component {
   render () {
     return (
       <div id='top-container'>
-        <h1>{this.props.compname}</h1>
+        <h1 style={{fontSize: '1.5rem'}}>{this.props.compname}</h1>
       </div>
     )
   }
